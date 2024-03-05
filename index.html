@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="./assets/img/icon.png" type="image/png">
+    <link rel="icon" href="./assets/img/icon.png" type="image/png" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -81,7 +81,7 @@
           display: block;
         }
         .img-publications {
-          height: 200px;
+          height: 170px;
         }
         .description_publication {
           font-size: 12px;
@@ -108,7 +108,7 @@
             style="box-shadow: 2px 2px 5px rgb(124, 119, 119)"
           >
             <div class="container-fluid px-0">
-              <img src="./assets/img/icon.png" alt="" style="width: 30px;" />
+              <img src="./assets/img/icon.png" alt="" style="width: 30px" />
               <a
                 class="navbar-brand font-weight-bolder ms-sm-3"
                 style="font-size: 22px"
@@ -176,9 +176,8 @@
                       تواصل معنا
                     </a>
                   </li>
-
                 </ul>
-                <ul  class="navbar-nav navbar-nav-hover ms-auto">
+                <ul class="navbar-nav navbar-nav-hover ms-auto">
                   <li class="nav-item dropdown dropdown-hover mx-2 text-center">
                     <button
                       class="text-decoration-underline text-info"
@@ -186,7 +185,9 @@
                       id="langue"
                       onclick="ChangeLangue(this)"
                       value="Français"
-                      >Français</button>
+                    >
+                      Français
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -209,12 +210,14 @@
               <h1 class="text-white pt-3 mt-n5" data-i18n="titre">
                 ألو هميزات
               </h1>
-              <p class="lead text-white mt-3 descriptionpage" data-i18n="description">
-                استكشف مجموعتنا المتنوعة من السلع ذات الجودة في مجال
-                'الألوهميزات'، مع الجمع بين الأناقة والراحة والوظائف لتلبية جميع
-                احتياجاتك اليومية.
+              <p
+                class="lead text-white mt-3 descriptionpage"
+                data-i18n="description"
+              >
+                استكشف مجموعتنا المتنوعة من السلع ذات الجودة مع 'ألوهميزات'، مع
+                الجمع بين الأناقة والراحة والوظائف لتلبية جميع احتياجاتك
+                اليومية.
               </p>
-            
             </div>
           </div>
         </div>
@@ -242,7 +245,9 @@
               </div>
             </fieldset>
           </div>
-          <div class="publications m-3" id="publications"></div>
+        </div>
+        <div class="">
+          <div class="publications" id="publications"></div>
         </div>
       </section>
     </div>
@@ -250,25 +255,25 @@
     <footer class="footer pt-5 mt-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 mb-4 ms-auto text-center">
-            <div>
+          <div class="col-md-3 ms-auto text-center d-flex">
+            <div class="w-50">
               <h6 class="font-weight-bolder mb-4" data-i18n="titre">
                 ألو هميزات
               </h6>
             </div>
-            <div>
+            <div class="w-50">
               <ul class="d-flex flex-row ms-n3 nav justify-content-center">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link pe-1" href="#">
                     <i class="fab fa-facebook text-lg opacity-8"></i>
                   </a>
-                </li>
+                </li> -->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link pe-1" href="#">
                     <i class="fab fa-twitter text-lg opacity-8"></i>
                   </a>
-                </li>
+                </li> -->
 
                 <li class="nav-item">
                   <a class="nav-link pe-1" href="#">
@@ -337,7 +342,7 @@
           titre: "AlloHmizat",
           vetements: "Couture des vêtements modernes",
           description:
-            "Explorez notre collection diversifiée d'articles de qualité dans le domaine des 'Allohmizat', alliant style, confort et fonctionnalité pour répondre à tous vos besoins au quotidien.",
+            "Explorez notre collection diversifiée d'articles de qualité dans avec 'Allohmizat', alliant style, confort et fonctionnalité pour répondre à tous vos besoins au quotidien.",
         },
         Arabic: {
           accueil: "الصفحة الرئيسية",
@@ -347,7 +352,7 @@
           titre: "ألو هميزات",
           vetements: "خياطة الملابس العصرية",
           description:
-            "استكشف مجموعتنا المتنوعة من السلع ذات الجودة في مجال 'الألوهميزات'، مع الجمع بين الأناقة والراحة والوظائف لتلبية جميع احتياجاتك اليومية.",
+            "استكشف مجموعتنا المتنوعة من السلع ذات الجودة مع 'ألوهميزات'، مع الجمع بين الأناقة والراحة والوظائف لتلبية جميع احتياجاتك اليومية.",
         },
       };
 
@@ -367,7 +372,7 @@
             Arabic: "خياطة ملابس عصرية تلبي رغباتكم وتستجيب لاذواقكم الرفيعة",
           },
           ["أم تسنيم", "   -   "],
-        ]
+        ],
       ];
 
       var divpublications = document.getElementById("publications");
@@ -428,9 +433,9 @@
             div += `<div class="carousel-indicators">`;
             for (j = 0; j < art[0].length; j++) {
               if (j == 0)
-                div += `<button type="button"  data-bs-target="#carouselExampleIndicators${k}" data-bs-slide-to="${j}" class='active bg-info' aria-current="true" aria-label="Slide ${j}" ></button>`;
+                div += `<button type="button"  data-bs-target="#carouselExampleIndicators${k}" data-bs-slide-to="${j}" class='active bg-light' aria-current="true" aria-label="Slide ${j}" ></button>`;
               else
-                div += `<button type="button" class="bg-info" data-bs-target="#carouselExampleIndicators${k}" data-bs-slide-to="${j}" aria-current="true" aria-label="Slide ${j}" ></button>`;
+                div += `<button type="button" class="bg-light" data-bs-target="#carouselExampleIndicators${k}" data-bs-slide-to="${j}" aria-current="true" aria-label="Slide ${j}" ></button>`;
             }
             div += `</div>`;
             div += `<div class="carousel-inner">`;
@@ -457,15 +462,16 @@
             div += `</button>`;
             div += `</div>`;
             div += `<div class='border p-1'>
-                  <div class='d-flex'><p style='width:80%;' class='fw-bold description_publication'>${art[2][langue]}</p>
-                    <p class="text-primary" onclick='detail(${k})'><span> `;
+                  <div class='d-flex'><p style='width:90%;' class='fw-bold description_publication'>${art[2][langue]}</p>
+                    <p class="text-info"    onclick='detail(${k})'><span> `;
             div += langue === "Arabic" ? "أكثر" : `Plus`;
-            div += `</span> <i class="bi bi-arrow-down-circle"></i></p> </div>`;
-            div += `<div class='' style='display:none' id='div${k}'>
-                     <div class="fw-bold d-flex"> <p class="w-25">`;
+            // <i class="bi bi-arrow-down-circle"></i>
+            div += `</span> </p> </div>`;
+            div += `<div class='' style='display:none;' id='div${k}'>
+                     <div class="fw-bold d-flex"> <p class="w-25" style="font-size:13px">`;
             div += langue === "Arabic" ? "الاسم" : `Nom`;
             div += `</p><p>: ${art[3][0]}</p></div>`;
-            div += `<div class="fw-bold d-flex"><p class="w-25">`;
+            div += `<div class="fw-bold d-flex"><p class="w-25" style="font-size:13px">`;
             div += langue === "Arabic" ? "رقم الهاتف" : `Téléphone`;
             div += `</p><p>: ${art[3][1]}</p>`;
             div += `</div>`;
